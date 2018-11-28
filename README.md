@@ -1,1 +1,1 @@
-### Dialog ITSR React front End 
+### E COMMERCE APPLICATION
