@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  /* font-family: Montserrat; */
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  background: #fff;
+  color: #4f4f4fd3 !important;
+  font-size: 12px;
+  overflow-x: hidden;
+}
+
