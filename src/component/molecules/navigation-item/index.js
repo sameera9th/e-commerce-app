@@ -1,24 +1,24 @@
-import React from 'react';
-import styled from 'styled-components';
-import { LinkButton, Badge } from './../../atoms';
-import { palette } from 'styled-theme';
+import React from "react";
+import styled from "styled-components";
+import { LinkButton, Badge } from "./../../atoms";
+import { palette } from "styled-theme";
 
 const NavigationItem = ({ to, name, active, count, type, icon }) => {
   const ItemRow = styled.div`
     flex-direction: row;
     display: flex;
     justify-content: space-between;
-    padding: 6px 12px 6px 12px;
+    padding: 6px 12px 6px 0px;
     background-color: ${active === false
-      ? palette('white', 1, true)
-      : palette('rgbascale', 0, true)};
+      ? palette("white", 1, true)
+      : palette("rgbascale", 0, true)};
     width: 258px;
     transition: background-color 250ms ease-out, color 250ms ease-out,
       border-color 250ms ease-out;
     &:hover,
     &:focus,
     &:active {
-      background-color: ${palette('rgbascale', 0, true)};
+      background-color: ${palette("rgbascale", 1, true)};
     }
   `;
   const Margin = styled.div`
@@ -30,17 +30,17 @@ const NavigationItem = ({ to, name, active, count, type, icon }) => {
   const Item = styled.div`
     flex-direction: row;
     display: flex;
-    margin-left: ${type === 1 ? 20 + 'px' : 0 + 'px'};
+    margin-left: ${type === 1 ? 20 + "px" : 0 + "px"};
     color: ${active === true
-      ? palette('primary', 0, true)
-      : palette('rgbascale', 4, true)};
+      ? palette("primary", 0, true)
+      : palette("rgbascale", 4, true)};
   `;
 
   const IconBlock = styled.div`
     width: 24px;
   `;
   const BadgeBlock = styled.div`
-    margin-top: ${type === 1 ? 2 + 'px' : 4 + 'px'};
+    margin-top: ${type === 1 ? 2 + "px" : 4 + "px"};
   `;
 
   return (
@@ -58,10 +58,10 @@ const NavigationItem = ({ to, name, active, count, type, icon }) => {
   );
 };
 NavigationItem.defaultProps = {
-  to: '/',
+  to: "/",
   name: null,
   active: false,
-  type: null,
+  type: null
 };
 
 export default NavigationItem;

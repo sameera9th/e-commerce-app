@@ -1,22 +1,23 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-import { logoutUser } from '../../../store/reducers/auth/action';
-import { CompanyLogo, Heading, RowLayout } from './../../atoms';
-import styled from 'styled-components';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
+import { logoutUser } from "../../../store/reducers/auth/action";
+import { CompanyLogo, Heading, RowLayout } from "./../../atoms";
+import styled from "styled-components";
 
 const Wrapper = styled.div`
   padding: 0px;
+  margin-top: 8px;
 `;
 const Name = styled.div`
-  margin-top: 20px;
-  margin-left : 20px;
+  margin-top: 18px;
+  margin-left: 20px;
 `;
 
 class Company extends Component {
   logout = () => {
     this.props.logoutUser();
-    this.props.history.push('/login');
+    this.props.history.push("/login");
   };
 
   render() {
@@ -37,7 +38,7 @@ class Company extends Component {
 
 function mapDispatchToProps(dispatch) {
   return {
-    logoutUser: () => dispatch(logoutUser()),
+    logoutUser: () => dispatch(logoutUser())
   };
 }
 

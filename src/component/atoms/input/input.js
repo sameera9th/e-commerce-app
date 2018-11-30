@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import styled, { css, keyframes } from 'styled-components';
-import { palette } from 'styled-theme';
-import { ifProp } from 'styled-tools';
+import React, { Component } from "react";
+import styled, { css, keyframes } from "styled-components";
+import { palette } from "styled-theme";
+import { ifProp } from "styled-tools";
 
 const setBorder = ({ error }) =>
-  error === true ? palette('primary', 4, true) : palette('grayscale', 0, true);
+  error === true ? palette("primary", 4, true) : palette("grayscale", 0, true);
 const setBackground = ({ error, disabled }) =>
   error === true
-    ? palette('rgbascale', 1, true)
-    : palette('white', disabled === true ? 0 : 1, true);
-const fontSize = ({ height }) => `${height / 35.5555555556}rem`;
+    ? palette("rgbascale", 1, true)
+    : palette("white", disabled === true ? 0 : 1, true);
+const fontSize = ({ height }) => `${height / 6.5555555556}rem`;
 const setCursor = ({ disabled }) =>
-  `${disabled === true ? 'not-allowed' : 'auto'}`;
-const setOpacity = ({ type }) => `${type === 'file' ? 0 : 1}`;
+  `${disabled === true ? "not-allowed" : "auto"}`;
+const setOpacity = ({ type }) => `${type === "file" ? 0 : 1}`;
 
 const bounce = keyframes`
   0% {
@@ -53,18 +53,19 @@ const setAnimation = ({ error }) => (error === true ? bounce : null);
 
 const styles = css`
   padding: 15px;
-  ${'' /* box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1); */}
+  ${"" /* box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1); */}
   border: 1px solid ${setBorder};
   width: 100%;
+  height:42px;
   box-sizing: border-box;
-  color: ${palette('grayscale', 1, true)};
+  color: ${palette("grayscale", 1, true)};
   font-size:${fontSize};
   outline: 0;
   border-radius: 3px;
   cursor: ${setCursor};
   background-color: ${setBackground};
-  resize : ${ifProp({ type: 'textarea' }, 'vertical', 'auto')};
-  min-height : ${ifProp({ type: 'textarea' }, '60px', 'auto')};
+  resize : ${ifProp({ type: "textarea" }, "vertical", "auto")};
+  min-height : ${ifProp({ type: "textarea" }, "60px", "auto")};
   opacity : ${setOpacity};
   transition: background-color 1s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-property: background-color , border;
@@ -72,7 +73,7 @@ const styles = css`
   animation-duration: .5s;
   animation-delay: 0.25s;
   &::placeholder { 
-    color: ${palette('grayscale', 1, true)};
+    color: ${palette("grayscale", 1, true)};
     opacity: 0.4; 
   }
 `;
@@ -97,12 +98,12 @@ class Input extends Component {
       placeholder,
       onChange,
       height,
-      error,
+      error
     } = this.props;
-    const Input = type === 'textarea' ? StyledTextarea : StyledInput;
+    const Input = type === "textarea" ? StyledTextarea : StyledInput;
     return (
       <Input
-        type={type || 'text'}
+        type={type || "text"}
         autoFocus={autoFocus}
         value={value}
         name={name}
@@ -118,6 +119,6 @@ class Input extends Component {
 
 Input.defaultProps = {
   height: 32,
-  error: false,
+  error: false
 };
 export { Input };
