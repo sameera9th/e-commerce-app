@@ -1,8 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { palette } from "styled-theme";
-import { Row, Col } from "./../../atoms/grid";
-import InputMolecule from "./../../molecules/input";
 import { Button } from "./../../atoms/button";
 import { Input } from "./../../atoms/input";
 

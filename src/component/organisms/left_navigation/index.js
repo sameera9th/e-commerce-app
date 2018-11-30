@@ -2,20 +2,20 @@ import React from "react";
 import styled from "styled-components";
 import { palette } from "styled-theme";
 import {
-  Button,
-  Plus,
-  NBreak,
-  Add,
-  Achieve,
-  Reject,
-  Clarifications,
-  InProgress,
-  Withdrawn,
-  Draft,
-  Dashboard,
-  Admin,
-  Team,
-  Settings
+  // Button,
+  // Plus,
+  NBreak
+  // Add,
+  // Achieve,
+  // Reject,
+  // Clarifications,
+  // InProgress,
+  // Withdrawn,
+  // Draft,
+  // Dashboard,
+  // Admin,
+  // Team,
+  // Settings
 } from "./../../atoms";
 import NavigationItem from "./../../molecules/navigation-item";
 
@@ -28,13 +28,6 @@ const NavBody = styled.div`
   left: 0;
   background-color: #fff;
   border-top: 0px;
-`;
-const MainButton = styled.div`
-  display :flex
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-  margin-bottom:30px;
 `;
 
 class LeftNavigation extends React.Component {
