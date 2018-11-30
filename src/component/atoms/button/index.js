@@ -1,106 +1,107 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
-import { palette } from 'styled-theme';
+import React from "react";
+import PropTypes from "prop-types";
+import styled, { css } from "styled-components";
+import { palette } from "styled-theme";
 
 function calcSize({ size, height, block }) {
   const buttonStyle = {};
   buttonStyle.width = `${block ? 100 : null}%`;
   switch (size) {
-    case 'large':
+    case "large":
       buttonStyle.fontSize = `${height / 55}rem`;
-      buttonStyle.padding = '15px 22px 15px 22px';
+      buttonStyle.padding = "15px 22px 15px 22px";
       break;
-    case 'medium':
+    case "medium":
       buttonStyle.fontSize = `${height / 60}rem`;
-      buttonStyle.padding = '12px 20px 12px 20px';
+      buttonStyle.padding = "12px 20px 12px 20px";
       break;
-    case 'small':
+    case "small":
       buttonStyle.fontSize = `${height / 65}rem`;
-      buttonStyle.padding = '8px 15px 8px 15px';
+      buttonStyle.padding = "8px 15px 8px 15px";
       break;
     default:
       buttonStyle.fontSize = `${height / 50}rem`;
-      buttonStyle.padding = '10px';
+      buttonStyle.padding = "10px";
       break;
   }
   return buttonStyle;
 }
 
 const setBackgroundColor = ({ colorful, buttonType }) => {
-  if (colorful && buttonType === 'primary') {
-    return palette('primary', 0, true);
-  } else if (colorful && buttonType === 'info') {
-    return palette('info', 2, true);
-  } else if (colorful && buttonType === 'success') {
-    return palette('success', 2, true);
-  } else if (colorful && buttonType === 'danger') {
-    return palette('danger', 2, true);
+  if (colorful && buttonType === "primary") {
+    return palette("primary", 0, true);
+  } else if (colorful && buttonType === "info") {
+    return palette("info", 2, true);
+  } else if (colorful && buttonType === "success") {
+    return palette("success", 2, true);
+  } else if (colorful && buttonType === "danger") {
+    return palette("danger", 2, true);
   } else {
-    return palette('white', 1, true);
+    return palette("white", 1, true);
   }
 };
 
 const setHoverBackgroundColor = ({ colorful, buttonType }) => {
-  if (colorful && buttonType === 'primary') {
-    return palette('primary', 1, true);
-  } else if (colorful && buttonType === 'info') {
-    return palette('info', 3, true);
-  } else if (colorful && buttonType === 'success') {
-    return palette('success', 3, true);
-  } else if (colorful && buttonType === 'danger') {
-    return palette('danger', 3, true);
+  if (colorful && buttonType === "primary") {
+    return palette("primary", 1, true);
+  } else if (colorful && buttonType === "info") {
+    return palette("info", 3, true);
+  } else if (colorful && buttonType === "success") {
+    return palette("success", 3, true);
+  } else if (colorful && buttonType === "danger") {
+    return palette("danger", 3, true);
   } else {
-    return palette('white', 0, true);
+    return palette("white", 0, true);
   }
 };
 
 const setColor = ({ transparent, colorful, buttonType }) => {
-  if (transparent && buttonType === 'primary') {
-    return palette('primary', 0, true);
-  } else if (transparent && buttonType === 'info') {
-    return palette('info', 2, true);
-  } else if (transparent && buttonType === 'sucess') {
-    return palette('info', 2, true);
-  } else if (transparent && buttonType === 'danger') {
-    return palette('danger', 2, true);
+  if (transparent && buttonType === "primary") {
+    return palette("primary", 0, true);
+  } else if (transparent && buttonType === "info") {
+    return palette("info", 2, true);
+  } else if (transparent && buttonType === "sucess") {
+    return palette("info", 2, true);
+  } else if (transparent && buttonType === "danger") {
+    return palette("danger", 2, true);
   } else if (colorful) {
-    return palette('white', 1, true);
+    return palette("white", 1, true);
   } else {
-    return palette('grayscale', 1, true);
+    return palette("grayscale", 1, true);
   }
 };
 
 const setHoverColor = ({ transparent, colorful, buttonType }) => {
-  if (transparent && buttonType === 'primary') {
-    return palette('primary', 1, true);
-  } else if (transparent && buttonType === 'info') {
-    return palette('info', 3, true);
-  } else if (transparent && buttonType === 'sucess') {
-    return palette('info', 3, true);
-  } else if (transparent && buttonType === 'danger') {
-    return palette('danger', 3, true);
+  if (transparent && buttonType === "primary") {
+    return palette("primary", 1, true);
+  } else if (transparent && buttonType === "info") {
+    return palette("info", 3, true);
+  } else if (transparent && buttonType === "sucess") {
+    return palette("info", 3, true);
+  } else if (transparent && buttonType === "danger") {
+    return palette("danger", 3, true);
   } else if (colorful) {
-    return palette('white', 1, true);
+    return palette("white", 1, true);
   } else {
-    return palette('grayscale', 1, true);
+    return palette("grayscale", 1, true);
   }
 };
 
 const getBoxShadow = ({ boxShadow }) => {
   if (boxShadow === true) {
-    return '0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)';
+    return "0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)";
   } else {
     return 0;
   }
 };
 
 const styleCommon = props => css`
+  height: 40px;
   background-color: ${setBackgroundColor};
   color: ${setColor};
   font-size: ${calcSize(props).fontSize};
   padding: ${calcSize(props).padding};
-  border-radius: 30px;
+  border-radius: 5px;
   display: inline-flex;
   justify-content: center;
   text-decoration: none;
@@ -142,11 +143,11 @@ const Button = ({
   block,
   children,
   height,
-  boxShadow,
+  boxShadow
 }) => {
   return (
     <Default
-      type={submit ? 'submit' : 'button'}
+      type={submit ? "submit" : "button"}
       buttonType={buttonType}
       colorful={colorful}
       transparent={transparent}
@@ -171,19 +172,19 @@ Button.propTypes = {
   block: PropTypes.bool,
   size: PropTypes.string,
   submit: PropTypes.bool,
-  boxShadow: PropTypes.bool,
+  boxShadow: PropTypes.bool
 };
 
 Button.defaultProps = {
   disabled: false,
   height: 50,
-  buttonType: 'primary',
+  buttonType: "primary",
   colorful: false,
   transparent: false,
   block: false,
-  size: 'small',
+  size: "small",
   submit: false,
-  boxShadow: true,
+  boxShadow: true
 };
 
 export { Button };

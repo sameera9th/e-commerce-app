@@ -5,6 +5,8 @@ import styled from "styled-components";
 import { palette } from "styled-theme";
 import { Row, Col } from "./../../atoms/grid";
 import Search from "./../../molecules/search";
+import { Button } from "./../../atoms/button";
+import { Cart } from "./../../atoms/icons/cart.icon";
 
 const NavBody = styled.div`
   padding: 3px 20px 5px 20px;
@@ -20,6 +22,12 @@ const NavBody = styled.div`
   background-color: #fff;
 `;
 
+const RightSide = styled.div`
+  float: right;
+  margin-top: 14px;
+  display: flex;
+  flex-direction: row;
+`;
 class TopNavigation extends React.Component {
   render() {
     return (
@@ -30,6 +38,17 @@ class TopNavigation extends React.Component {
           </Col>
           <Col className="col-md-4">
             <Search />
+          </Col>
+          <Col className="col-md-6">
+            <RightSide>
+              <Button buttonType="danger" transparent={true}>
+                Log Out
+              </Button>
+              &nbsp;&nbsp;
+              <Button colorful={true} colorful={false} boxShadow={false}>
+                <Cart />
+              </Button>
+            </RightSide>
           </Col>
         </Row>
       </NavBody>

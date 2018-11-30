@@ -19,7 +19,7 @@ class Search extends React.Component {
       <SearchBody>
         <Input type="text" placeholder="Search" height={7} />
         &nbsp;&nbsp;
-        <Button colorful={true}>Search</Button>
+        <Button>Search</Button>
       </SearchBody>
     );
   }
