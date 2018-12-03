@@ -8,7 +8,7 @@ const style = css`
   display: inline-block;
   max-height: 370px;
   min-height: 370px;
-  margin: 1rem;
+  margin-bottom: 20px;
   position: relative;
   width: 100%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);

@@ -3,8 +3,8 @@ import LeftNavigation from "./../../organisms/left_navigation";
 import TopNavigation from "./../../organisms/top_navigation";
 import { Content } from "./../../atoms";
 import ItemCard from "./../../organisms/item_card";
-import { Heading } from "./../../atoms";
-import { Row, Col } from "./../../atoms/grid";
+import { Row } from "./../../atoms/grid";
+import SubHeading from "./../../organisms/sub_heading";
 import itemone from "./../../../images/cart/download-1.jpg";
 import itemtwo from "./../../../images/cart/download-2.jpg";
 import itemthree from "./../../../images/cart/download-3.jpg";
@@ -17,13 +17,7 @@ const Dashboard = () => {
       <LeftNavigation />
       <TopNavigation />
       <Content>
-        <Row>
-          <Col className="col-md-12">
-            <Heading level={1} grayScale={5} fontWeight={3}>
-              Popural products
-            </Heading>
-          </Col>
-        </Row>
+        <SubHeading> Product List</SubHeading>
         <Row>
           <ItemCard bgImage={itemone} itemName="Nike Watch" />
           <ItemCard bgImage={itemtwo} itemName="Cheerson Drone" />

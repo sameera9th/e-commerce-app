@@ -9,6 +9,9 @@ const AsyncPageNotFount = AsyncComponent(() =>
 const AsyncDashboard = AsyncComponent(() =>
   import("./component/pages/product_dashboard")
 );
+const AsyncProductDetails = AsyncComponent(() =>
+  import("./component/pages/product_detail")
+);
 
 export default ({ childProps }) => (
   <Switch>
@@ -16,6 +19,11 @@ export default ({ childProps }) => (
       path="/product-dashboard"
       exact
       component={AsyncDashboard}
+      props={childProps}
+    />
+    <AuthenticatedRoute
+      path="/product-details"
+      component={AsyncProductDetails}
       props={childProps}
     />
     <Route component={AsyncPageNotFount} />
