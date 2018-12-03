@@ -20,6 +20,7 @@ const NavBody = styled.div`
   position: fixed;
   width: 100%;
   background-color: #fff;
+  z-index: 99999999 !important;
 `;
 
 const RightSide = styled.div`

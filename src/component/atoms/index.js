@@ -37,3 +37,5 @@ export * from "./icons/left.icon";
 export * from "./icons/profile.icon";
 export * from "./icons/expand.icon";
 export * from "./icons/copress.icon";
+export * from "./icons/cart.icon";
+export * from "./icons/add_cart.icon";

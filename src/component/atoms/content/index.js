@@ -5,7 +5,7 @@ import styled, { css } from "styled-components";
 const style = css`
   margin-left: 230px;
   margin-top: 62px;
-  z-index: -99 !important;
+  z-index: -99999999 !important;
   padding: 50px;
   overflow: hidden;
   background: #fff;

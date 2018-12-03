@@ -6,8 +6,8 @@ const style = css`
   background: #fff;
   border-radius: 2px;
   display: inline-block;
-  max-height: 350px;
-  min-height: 350px;
+  max-height: 370px;
+  min-height: 370px;
   margin: 1rem;
   position: relative;
   width: 100%;
