@@ -14,7 +14,7 @@ class Search extends React.Component {
   render() {
     return (
       <SearchBody>
-        <Input type="text" placeholder="Search" height={7} />
+        <Input type="text" placeholder="Search..." height={7} />
         &nbsp;&nbsp;
         <Button>Search</Button>
       </SearchBody>

@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'react-router-dom/Link';
-import styled, { css } from 'styled-components';
-import { palette } from 'styled-theme';
+import React from "react";
+import Link from "react-router-dom/Link";
+import styled, { css } from "styled-components";
+import { palette } from "styled-theme";
 
-const weight = () => palette('weight', 3, true);
+const weight = () => palette("weight", 3, true);
 const fontSize = ({ height }) => `${height / 55}rem`;
-const color = ({ color }) => palette('grayscale', 4, true);
+const color = ({ color }) => palette("grayscale", 4, true);
 
 const styles = css``;
 
@@ -40,7 +40,7 @@ const LinkButton = ({ children, to }) => {
 
 LinkButton.defaultProps = {
   height: 40,
-  color: palette('grayscale', 4, true),
+  color: palette("grayscale", 4, true)
 };
 
 export { LinkButton };

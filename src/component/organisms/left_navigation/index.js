@@ -40,12 +40,12 @@ class LeftNavigation extends React.Component {
     return (
       <>
         <NavBody>
-          <NBreak>Main</NBreak>
+          <NBreak />
           <NavigationItem
             type={1}
             to="/dashboard"
             count={41}
-            name="New Request"
+            name="Phones"
             active={true}
             // icon={<Add active={true} />}
           />
@@ -53,7 +53,7 @@ class LeftNavigation extends React.Component {
             type={1}
             to="/dashboard/approval"
             count={14}
-            name="Approval"
+            name="New Phones"
             active={false}
             // icon={<Achieve active={false} />}
           />
@@ -61,21 +61,21 @@ class LeftNavigation extends React.Component {
             type={1}
             to="/home"
             count={31}
-            name="Reject"
+            name="Used Phones"
             active={false}
             // icon={<Reject active={false} />}
           />
           <NavigationItem
             type={1}
             to="/home"
-            name="Clarification"
+            name="Phones Repairs"
             active={false}
             // icon={<Clarifications active={false} />}
           />
           <NavigationItem
             type={1}
             to="/home"
-            name="In Progress"
+            name="Laptops"
             active={false}
             // icon={<InProgress active={false} />}
           />
@@ -83,30 +83,30 @@ class LeftNavigation extends React.Component {
             type={1}
             to="/home"
             count={41}
-            name="Request"
+            name="Tablets"
             active={false}
             // icon={<Add active={false} />}
           />
-          <NBreak>categories</NBreak>
+          {/* <NBreak>Categories</NBreak> */}
           <NavigationItem
             type={1}
             to="/home"
             count={14}
-            name="Approval"
+            name="Television"
             active={false}
             // icon={<Achieve active={false} />}
           />
           <NavigationItem
             type={1}
             to="/home"
-            name="Withdrawn"
+            name="Accessories"
             active={false}
             // icon={<Withdrawn active={false} />}
           />
           <NavigationItem
             type={1}
             to="/home"
-            name="Draft"
+            name="Others"
             active={false}
             // icon={<Draft active={false} />}
           />

@@ -39,3 +39,7 @@ export * from "./icons/expand.icon";
 export * from "./icons/copress.icon";
 export * from "./icons/cart.icon";
 export * from "./icons/add_cart.icon";
+export * from "./icons/facebook.icon";
+export * from "./icons/twitter.icon";
+export * from "./icons/google.icon";
+export * from "./icons/pinterest.icon";

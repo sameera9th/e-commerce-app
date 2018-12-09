@@ -7,11 +7,28 @@ import {
   Background,
   RowLayout,
   Button,
-  AddCart
+  AddCart,
+  LinkButton
 } from "./../../atoms";
+import { Redirect } from "react-router-dom";
 
 class ItemCard extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      toProductsDetails: false
+    };
+  }
+
+  renderRedirect = () => {
+    this.setState({ toProductsDetails: true });
+  };
+
   render() {
+    if (this.state.toProductsDetails === true) {
+      return <Redirect to="/product-details" />;
+    }
+
     return (
       <Col className="col-md-3">
         <Card>
@@ -32,7 +49,12 @@ class ItemCard extends React.Component {
             </RowLayout>
             <div style={{ marginTop: "10px" }} />
             <RowLayout direction="space-between">
-              <Button colorful={true} colorful={false} boxShadow={false}>
+              <Button
+                onClick={this.renderRedirect}
+                colorful={true}
+                colorful={false}
+                boxShadow={false}
+              >
                 Details
               </Button>
               <Button transparent={true}>

@@ -1,10 +1,11 @@
-import React from 'react';
-import styled, { css } from 'styled-components';
-import { palette } from 'styled-theme';
+import React from "react";
+import styled, { css } from "styled-components";
+import { palette } from "styled-theme";
 
 const style = css`
-  background-color: ${palette('grayscale', 6, true)};
+  background-color: ${palette("grayscale", 7, true)};
   height: 1px;
+  width: 100%;
 `;
 
 const BadgeStyle = styled.div`
