@@ -22,7 +22,7 @@ const styles = css`
   font-size: ${fontSize};
   margin: 0;
   color: ${color};
-  z-index: -999999999999;
+  z-index: 999999999999;
 `;
 
 const Heading = styled(
