@@ -3,8 +3,9 @@ import styled from "styled-components";
 import { LinkButton, Badge } from "./../../atoms";
 import { palette } from "styled-theme";
 
-const NavigationItem = ({ to, name, active, count, type, icon }) => {
+const NavigationItem = ({ to, name, active, count, type, icon, onClick }) => {
   const ItemRow = styled.div`
+    cursor: pointer;
     flex-direction: row;
     display: flex;
     justify-content: space-between;
@@ -33,7 +34,7 @@ const NavigationItem = ({ to, name, active, count, type, icon }) => {
     margin-left: ${type === 1 ? 20 + "px" : 0 + "px"};
     color: ${active === true
       ? palette("primary", 0, true)
-      : palette("rgbascale", 4, true)};
+      : palette("primary", 1, true)};
   `;
 
   const IconBlock = styled.div`
@@ -45,7 +46,7 @@ const NavigationItem = ({ to, name, active, count, type, icon }) => {
 
   return (
     <LinkButton to={to}>
-      <ItemRow>
+      <ItemRow onClick={onClick}>
         <Item>
           <IconBlock>{icon}</IconBlock>
           <Margin>{name}</Margin>

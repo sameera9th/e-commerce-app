@@ -15,6 +15,7 @@ export * from "./status_background";
 export * from "./position";
 export * from "./card";
 export * from "./background";
+export * from "./nav_collaps";
 
 export * from "./button";
 export * from "./link";

@@ -17,6 +17,14 @@ const Links = styled(Link)`
   color: ${color};
 `;
 
+const Btn = styled.div`
+  display: inline-flex;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  color: red;
+`;
+
 const StyledLink = styled(
   ({ disabled, transparent, height, theme, color, children, to }) => (
     <Links
@@ -34,8 +42,29 @@ const StyledLink = styled(
   ${styles};
 `;
 
+const StyledButton = styled(
+  ({ disabled, transparent, height, theme, color, children, to }) => (
+    <Btn
+      theme={theme}
+      color={color}
+      disabled={disabled}
+      transparent={transparent}
+      height={height}
+      to={to}
+    >
+      {children}
+    </Btn>
+  )
+)`
+  ${styles};
+`;
+
 const LinkButton = ({ children, to }) => {
-  return <StyledLink to={to}>{children} </StyledLink>;
+  if (to === null) {
+    return <StyledButton to={to}>{children} </StyledButton>;
+  } else {
+    return <StyledLink to={to}>{children} </StyledLink>;
+  }
 };
 
 LinkButton.defaultProps = {
