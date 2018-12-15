@@ -25,6 +25,10 @@ class ProductZoom extends React.Component {
               src: example,
               width: 1000,
               height: 1000
+            },
+            style: {
+              background: "#000",
+              zIndex: 999999999999999
             }
           }}
         />

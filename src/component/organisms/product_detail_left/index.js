@@ -15,7 +15,7 @@ class ProductDetailsLeft extends React.Component {
           {this.props.productName}
         </Heading>
         <Padding size={5} direction="vertical">
-          <Heading level={7} grayScale={6} fontWeight={3}>
+          <Heading level={6} grayScale={6} fontWeight={3}>
             {this.props.itemName}
           </Heading>
         </Padding>

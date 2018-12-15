@@ -40,10 +40,10 @@ class ItemCard extends React.Component {
           <Background bgImage={this.props.bgImage} />
           <Padding size={15}>
             <RowLayout direction="space-between">
-              <Heading level={7} grayScale={2} fontWeight={1}>
+              <Heading level={6} grayScale={2} fontWeight={1}>
                 Price : $232
               </Heading>
-              <Heading level={7} grayScale={5} fontWeight={4}>
+              <Heading level={6} grayScale={5} fontWeight={4}>
                 Popular
               </Heading>
             </RowLayout>
