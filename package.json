@@ -30,6 +30,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
+    "react-dropzone": "^8.0.2",
     "react-image-magnify": "^2.7.4",
     "react-image-zoom": "^0.7.0",
     "react-onclickoutside": "^6.7.1",
