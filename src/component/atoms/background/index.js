@@ -1,9 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { palette } from "styled-theme";
-import loaderImage from "./../../../images/1200px-Dialog_Axiata_logo.svg.png";
+// import loaderImage from "./../../../images/1200px-Dialog_Axiata_logo.svg.png";
 
-const getBackground = ({ bgImage }) => bgImage;
+// const getBackground = ({ bgImage }) => bgImage;
 
 const style = css`
   display: flex;

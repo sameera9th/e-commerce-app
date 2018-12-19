@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { palette } from "styled-theme";
-import { NBreak, NavCollaps } from "./../../atoms";
-import NavigationItem from "./../../molecules/navigation-item";
+import { NBreak } from "./../../atoms";
 
 import Phone from "./phones";
 import LapTop from "./laptops";

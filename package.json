@@ -23,6 +23,7 @@
     ]
   },
   "dependencies": {
+    "360-react-pannellum": "^0.0.3",
     "axios": "^0.18.0",
     "bootstrap-4-grid": "^2.4.1",
     "install": "^0.12.2",

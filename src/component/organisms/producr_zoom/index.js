@@ -1,8 +1,8 @@
 import React from "react";
-import { Col } from "./../../atoms/grid";
 import { DefaultBox } from "./../../atoms/boxes/default_box";
 import ReactImageMagnify from "react-image-magnify";
 import example from "./../../../images/cart/download-1.jpg";
+// import Pannellum from "components/360-react-pannellum";
 
 class ProductZoom extends React.Component {
   constructor(props) {

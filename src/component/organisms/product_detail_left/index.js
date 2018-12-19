@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, Padding, Break, Text, RowLayout } from "./../../atoms";
+import { Heading, Padding, Break, Text } from "./../../atoms";
 import Quantity from "./../../molecules/quantity";
 import Share from "./../../molecules/share";
 class ProductDetailsLeft extends React.Component {

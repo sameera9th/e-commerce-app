@@ -7,8 +7,7 @@ import {
   Background,
   RowLayout,
   Button,
-  AddCart,
-  LinkButton
+  AddCart
 } from "./../../atoms";
 import { Redirect } from "react-router-dom";
 
