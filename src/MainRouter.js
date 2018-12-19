@@ -12,6 +12,9 @@ const AsyncDashboard = AsyncComponent(() =>
 const AsyncProductDetails = AsyncComponent(() =>
   import("./component/pages/product_detail")
 );
+const AsyncAddNewProduct = AsyncComponent(() =>
+  import("./component/pages/admin/add_new_product")
+);
 
 export default ({ childProps }) => (
   <Switch>
@@ -24,6 +27,11 @@ export default ({ childProps }) => (
     <AuthenticatedRoute
       path="/product-details"
       component={AsyncProductDetails}
+      props={childProps}
+    />
+    <AuthenticatedRoute
+      path="/admin/add-new-product"
+      component={AsyncAddNewProduct}
       props={childProps}
     />
     <Route component={AsyncPageNotFount} />

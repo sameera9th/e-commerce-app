@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { palette } from "styled-theme";
 import { NBreak } from "./../../atoms";
+import NavigationItem from "./../../molecules/navigation-item";
 
 import Phone from "./phones";
 import LapTop from "./laptops";
@@ -48,6 +49,12 @@ class LeftNavigation extends React.Component {
           <Television />
           <Accessories />
           <Others />
+          <NavigationItem
+            type={2}
+            to="/add-new"
+            name="New Products"
+            active={false}
+          />
         </NavBody>
       </>
     );

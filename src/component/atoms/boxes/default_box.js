@@ -1,6 +1,6 @@
-import React from 'react';
-import styled, { css } from 'styled-components';
-import { palette } from 'styled-theme';
+import React from "react";
+import styled, { css } from "styled-components";
+import { palette } from "styled-theme";
 
 const borderActive = ({ border }) => `${border === true ? 1 : 0}px`;
 const shadowActive = ({ shadow, Shadowlevel }) =>
@@ -13,10 +13,11 @@ const shadowActive = ({ shadow, Shadowlevel }) =>
   }`;
 
 const style = css`
-  background-color: ${palette('white', 1, true)};
-  border: ${borderActive} solid ${palette('grayscale', 0, true)};
+  background-color: ${palette("white", 1, true)};
+  border: ${borderActive} solid ${palette("grayscale", 0, true)};
   box-shadow: ${shadowActive};
   border-radius: 2px;
+  margin-bottom: 30px;
 `;
 
 const Box = styled.div`
@@ -34,6 +35,6 @@ const DefaultBox = ({ border, shadow, children, Shadowlevel }) => {
 DefaultBox.defaultProps = {
   border: null,
   shadow: true,
-  Shadowlevel: null,
+  Shadowlevel: null
 };
 export { DefaultBox };

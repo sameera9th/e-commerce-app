@@ -14,6 +14,8 @@ const setCursor = ({ disabled }) =>
   `${disabled === true ? "not-allowed" : "auto"}`;
 const setOpacity = ({ type }) => `${type === "file" ? 0 : 1}`;
 
+const setHeight = ({ type }) => `${type === "textarea" ? 100 : 42}px`;
+
 const bounce = keyframes`
   0% {
     transform: translateX(0px);
@@ -56,7 +58,7 @@ const styles = css`
   ${"" /* box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1); */}
   border: 1px solid ${setBorder};
   width: 100%;
-  height:42px;
+  height:${setHeight};
   box-sizing: border-box;
   color: ${palette("grayscale", 1, true)};
   font-size:${fontSize};
